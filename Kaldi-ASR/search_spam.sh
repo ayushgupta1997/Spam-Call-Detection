@@ -1,0 +1,31 @@
+#!/bin/bash
+
+exec 4< /home/shivani/project_spam/KWS_SPAM/test_files.txt
+
+no_of_files=$(cat /home/shivani/project_spam/KWS_SPAM/test_files.txt | wc -l)
+no_of_words=$(cat /home/shivani/project_spam/KWS_SPAM/raw_keywords.txt | wc -l)
+echo $no_of_files
+
+for ((j=1;j<=$no_of_files;j++))
+do
+echo "******file_name and no********"
+echo $j
+read <&4
+text_list=$REPLY
+echo $text_list
+exec 5</home/shivani/project_spam/KWS_SPAM/raw_keywords.txt
+for ((k=1;k<=$no_of_words;k++))
+do
+echo "*********word no***********"
+echo $k
+
+echo "**************word name**************"
+read <&5
+word=$REPLY
+echo $word
+echo "*****count***********"
+grep -c $word $text_list   
+done 
+done >spam_text.txt
+#################################
+
