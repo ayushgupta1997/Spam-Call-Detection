@@ -1,4 +1,4 @@
-# Automatic Speech Recognition (ASR)
+# Spam Detection using Automatic Speech Recognition (ASR)
 
 ## Project Overview
 
@@ -13,4 +13,4 @@ we will build a deep neural network that functions as part of an end-to-end auto
 
 ## Dataset
 
-We begin by investigating the [LibriSpeech dataset](http://www.openslr.org/12/) that will be used to train and evaluate your models. The algorithm will first convert any raw audio to feature representations that are commonly used for ASR. We will then move on to building neural networks that can map these audio features to transcribed text. 
+We have investigated a custom data set collected by us using Audacity, the speech contains the both Hindi and English audio that will be used to train and evaluate your models. The algorithm will first convert any raw audio to feature representations that are commonly used for ASR. We will then move on to building neural networks that can map these audio features to transcribed text. 
